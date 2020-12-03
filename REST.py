@@ -1,5 +1,5 @@
 # import flask
-from flask import Flask
+from flask import Flask, render_template
 
 # set up application, referencing this file
 app = Flask(__name__)
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 # define the function for this route
 def index():
-  return "Hullooooo Wurld!"
+  return render_template('index.html')
 
 if __name__ == "__main__":
   app.run(debug=True)
